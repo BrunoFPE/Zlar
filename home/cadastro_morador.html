@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlar - Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Cadastro de Morador</h1>
+
+    <form id="formMorador" novalidate>
+        <input type="text" id="nome" placeholder="Nome completo">
+        <input type="text" id="endereco" placeholder="Endereço">
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="password" id="senha" placeholder="Senha">
+        <input type="text" id="telefone" placeholder="Telefone">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <div class="acoes-centro">
+        <a class="novo" href="lista.php">Ver moradores cadastrados</a>
+    </div>
+</div>
+
+<script src="../js/morador_novo.js"></script>
+
+</body>
+</html>
