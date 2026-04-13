@@ -1,31 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #2bb673, #1f8a70);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
+    background: #ffffff;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #12344d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2bb673;
+    box-shadow: 0 0 0 3px rgba(43, 182, 115, 0.2);
+}
+
+input::placeholder {
+    color: #888;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background: #4facfe;
+    padding: 14px;
     border: none;
+    border-radius: 10px;
+    background: #2bb673;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #249963;
+    transform: scale(1.03);
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
